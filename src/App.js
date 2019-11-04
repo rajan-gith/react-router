@@ -5,7 +5,7 @@ import Menu from './menu/Menu.js';
 import About from './about/About.js';
 import Contact from './contact/Contact.js';
 import './menu/Menu.css'
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
@@ -16,9 +16,11 @@ function App() {
       <BrowserRouter>
         <div className="menu-container">
           <Menu/>
-          <Route path="/" exact component = {Home} />
-          <Route path="/about" component = {About} />
-          <Route path="/contact" component = {Contact} />
+          <Switch>
+            <Route path="/" exact component = {Home} />
+            <Route path="/about" component = {About} />
+            <Route path="/contact" component = {Contact} />
+          </Switch>
         </div>
       </BrowserRouter>
     </div>
