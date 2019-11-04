@@ -1,10 +1,13 @@
 import React from 'react';
-import './Contact.css'
+import './Contact.css';
+import Form from './../form/Form';
 
 const Contact = (argument) => {
 	return (
 		<div className="contact-container">
-			<h2>Welcome to Contact us page.</h2>
+			<h2 className="flex">Welcome to Contact us page.</h2>
+			<br/>
+			<Form/>
 		</div>
 	)
 }

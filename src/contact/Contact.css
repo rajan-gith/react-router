@@ -3,7 +3,10 @@
 	height: 300px;
 	background-color: #7bed9f;
 	color: white;
-	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.flex{
+	/*display: flex*/
 }
