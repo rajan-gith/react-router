@@ -5,7 +5,7 @@ import Menu from './menu/Menu.js';
 import About from './about/About.js';
 import Contact from './contact/Contact.js';
 import './menu/Menu.css'
-import
+import {BrowserRouter, Route} from 'react-router-dom';
 
 function App() {
   return (
@@ -13,12 +13,14 @@ function App() {
       <div className="App">
         <h1>Welcome to react routing</h1>
       </div>
-      <div className="menu-container">
-        <Menu/>
-        <Home/>
-        <About/>
-        <Contact/>
-      </div>
+      <BrowserRouter>
+        <div className="menu-container">
+          <Menu/>
+          <Route path="/" exact component = {Home} />
+          <Route path="/about" component = {About} />
+          <Route path="/contact" component = {Contact} />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
